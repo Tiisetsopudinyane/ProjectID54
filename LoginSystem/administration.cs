@@ -137,105 +137,24 @@ namespace LoginSystem
             
             if (comboBoxfacultyStu.SelectedIndex == 0)
             {
+                comboboxdepartmentStu.Text = "";
                 comboboxdepartmentStu.Items.AddRange(engineering);
             }
                 
             else if (comboBoxfacultyStu.SelectedIndex == 1)
             {
+                comboboxdepartmentStu.Text = "";
                 String[] economics = { "Economics and finance", "Logistics and management", "Psychology" };
                 comboboxdepartmentStu.Items.AddRange(economics);
             }
             else if (comboBoxfacultyStu.SelectedIndex == 2)
             {
+                comboboxdepartmentStu.Text = "";
                 String[] comunic = { "Advertising", "Public relations", "Cinema and television" };
                 comboboxdepartmentStu.Items.AddRange(comunic);
             }
 
         }
-
-        private void VIEWTRANSCRIPTToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            panelDesplay.Controls.Clear();
-            readonfile(txtsearchStu.Text);
-            transcript.Fname.Text = myobject.firstname;
-            transcript.Lname.Text = myobject.surname;
-            transcript.UniName.Text = myobject.universityname;
-            transcript.Snumber.Text = myobject.studentEmployeenumber;
-            transcript.label22.Text = myobject.dateofadministration;
-            transcript.label26.Text = mydate.ToString();
-            transcript.NDepartment.Text = myobject.department;
-            if (myobject.gender.Equals("MALE"))
-            {
-                transcript.lblTitle.Text = "MR";
-            }
-            else if (myobject.gender.Equals("FEMALE"))
-            {
-                transcript.lblTitle.Text = "MRS|MISS";
-            }
-
-            readFile("PHY1002.txt");
-            readFile("EEE1002.txt");
-            readFile("MAT1006.txt");
-            readFile("ENG1004.txt");
-
-            panelDesplay.Controls.Add(transcript);
-        }
-
-        public void readFile(string filename)
-        {
-            try
-            {
-                StreamReader sr = new StreamReader(filename);
-                String[] line;
-                while (true)
-                {
-                    line = sr.ReadLine().Split('-');
-                    if (line[0].Equals(txtsearchStu.Text)) break;
-                    else if (line == null) break;
-                    ;
-                }
-                sr.Close();
-                ListViewItem lvi = new ListViewItem(line[1]);
-                lvi.SubItems.Add(line[6]);
-                lvi.SubItems.Add(line[7]);
-                transcript.listView1.Items.Add(lvi);
-
-            }
-            catch (FileNotFoundException)
-            {
-                MessageBox.Show("Student does not exist");
-            }
-        }
-
-        private void MEMBERINFORMATIONToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            panelDesplay.Controls.Clear();
-            try
-            {
-                readonfile(txtsearchStu.Text);
-                memberinfo.password.Text = myobject.studentEmployeenumber;
-                memberinfo.fname.Text = myobject.firstname.ToUpper();
-                memberinfo.lname.Text = myobject.surname.ToUpper();
-                memberinfo.gender.Text = myobject.gender;
-                memberinfo.country.Text = myobject.country.ToUpper();
-                memberinfo.city.Text = myobject.city.ToUpper();
-                memberinfo.zipCode.Text = myobject.zipcode.ToUpper();
-                memberinfo.faculty.Text = myobject.faculty.ToUpper();
-                memberinfo.department.Text = myobject.department.ToUpper();
-                memberinfo.email.Text = myobject.email.ToLower();
-                memberinfo.lblunivesityname.Text = myobject.universityname;
-                memberinfo.participationfield.Text = myobject.participationField.ToUpper();
-                memberinfo.studentEmployeeNo.Text = myobject.studentEmployeenumber;
-                memberinfo.labeladministration.Text = myobject.dateofadministration;
-                panelDesplay.Controls.Add(memberinfo);
-            }
-            catch (NullReferenceException)
-            {
-
-            }
-
-        }
-
         public void readonfile(String number)
         {
 
@@ -276,6 +195,104 @@ namespace LoginSystem
 
         }
 
+        public void readFile(string filename)
+        {
+            try
+            {
+                StreamReader sr = new StreamReader(filename);
+                String[] line ;
+                while (true)
+                {
+                        line = sr.ReadLine().Split('-');
+                    if (line[0].Equals(myobject.studentEmployeenumber.ToString()))
+                    {
+                        ListViewItem lvi = new ListViewItem(line[1]);
+                        lvi.SubItems.Add(line[6]);
+                        lvi.SubItems.Add(line[7]);
+                        transcript.listView1.Items.Add(lvi);
+
+                        break; 
+                    }
+                    else if (line == null) break;
+                    
+                }
+                sr.Close();
+                
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("Student does not exist");
+            }
+        }
+
+
+        private void VIEWTRANSCRIPTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelDesplay.Controls.Clear();
+            try
+            {
+                readonfile(myobject.studentEmployeenumber);
+                transcript.Fname.Text = myobject.firstname;
+                transcript.Lname.Text = myobject.surname;
+                transcript.UniName.Text = myobject.universityname;
+                transcript.Snumber.Text = myobject.studentEmployeenumber;
+                transcript.label22.Text = myobject.dateofadministration;
+                transcript.label26.Text = mydate.ToString();
+                transcript.NDepartment.Text = myobject.department;
+                if (myobject.gender.Equals("MALE"))
+                {
+                    transcript.lblTitle.Text = "MR";
+                }
+                else if (myobject.gender.Equals("FEMALE"))
+                {
+                    transcript.lblTitle.Text = "MRS|MISS";
+                }
+
+                readFile("PHY1002.txt");
+                readFile("EEE1002.txt");
+                readFile("MAT1006.txt");
+                readFile("ENG1004.txt");
+  
+            }
+            catch(NullReferenceException)
+            {
+
+            }
+            panelDesplay.Controls.Add(transcript);
+        }
+
+       
+
+        private void MEMBERINFORMATIONToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelDesplay.Controls.Clear();
+            try
+            {
+                readonfile(myobject.studentEmployeenumber.ToString());
+                memberinfo.password.Text = myobject.studentEmployeenumber;
+                memberinfo.fname.Text = myobject.firstname;
+                memberinfo.lname.Text = myobject.surname;
+                memberinfo.gender.Text = myobject.gender;
+                memberinfo.country.Text = myobject.country;
+                memberinfo.city.Text = myobject.city;
+                memberinfo.zipCode.Text = myobject.zipcode;
+                memberinfo.faculty.Text = myobject.faculty;
+                memberinfo.department.Text = myobject.department;
+                memberinfo.email.Text = myobject.email;
+                memberinfo.lblunivesityname.Text = myobject.universityname;
+                memberinfo.participationfield.Text = myobject.participationField;
+                memberinfo.studentEmployeeNo.Text = myobject.studentEmployeenumber;
+                memberinfo.labeladministration.Text = myobject.dateofadministration;
+                panelDesplay.Controls.Add(memberinfo);
+            }
+            catch (NullReferenceException)
+            {
+
+            }
+
+        }
+
+       
         private void BtnsearchStu_Click_1(object sender, EventArgs e)
         {
             readonfile(txtsearchStu.Text.Trim());
@@ -411,6 +428,11 @@ namespace LoginSystem
         private void listboxStu_DoubleClick_1(object sender, EventArgs e)
         {
             MEMBERINFORMATIONToolStripMenuItem_Click(null, null);
+        }
+
+        private void txtsearchStu_Enter(object sender, EventArgs e)
+        {
+            listboxStu.Items.Clear();
         }
     }
 }

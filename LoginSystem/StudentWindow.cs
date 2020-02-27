@@ -18,8 +18,9 @@ namespace LoginSystem
             InitializeComponent();
             stu = new StudentInfo(this);
             read();
-          
-            myobject=new MyObjectClass();
+            this.BackColor = Color.FromArgb(60, 60, 60);
+            this.ForeColor = Color.FromArgb(128, 128, 128);
+            myobject =new MyObjectClass();
         }
         MyObjectClass myobject;
         public StudentWindow(String name, String surname, String faculty, String department, String studentnumber, String country,
@@ -36,8 +37,10 @@ namespace LoginSystem
             this.szipcode = zipcode;
             this.semail = email;
             myobject = new MyObjectClass();
-            
-       }
+            this.BackColor = Color.FromArgb(60, 60, 60);
+            this.ForeColor = Color.FromArgb(128, 128, 128);
+
+        }
         String scountry = "",scity = "", szipcode = "", semail = "";
         
         //PLEASE CHECK THIS WINDOW.REPLACE TEXTBOX WITH LABELS.STUDENTS CANT FILL THEIR OWN QUIZS

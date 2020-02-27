@@ -26,12 +26,17 @@ namespace LoginSystem
             this.lblCity.Text = city;
             this.lblZipCode.Text = zipcode;
             this.txtEmail.Text = email;
+            this.BackColor = Color.FromArgb(60, 60, 60);
+            this.ForeColor = Color.FromArgb(128, 128, 128);
+
         }
         public StudentInfo(StudentWindow learner)
         {
             InitializeComponent();
             this.learner = learner;
-            
+            this.BackColor = Color.FromArgb(60, 60, 60);
+            this.ForeColor = Color.FromArgb(128, 128, 128);
+
         }
         StudentWindow learner;
        

@@ -77,7 +77,6 @@
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(251, 20);
             this.txtusername.TabIndex = 1;
-            this.txtusername.Text = "Andreas.Motsie";
             this.txtusername.Click += new System.EventHandler(this.txtusername_Click);
             // 
             // txtpassword
@@ -89,15 +88,15 @@
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(251, 20);
             this.txtpassword.TabIndex = 2;
-            this.txtpassword.Text = "46664";
             this.txtpassword.Click += new System.EventHandler(this.txtpassword_Click);
             // 
             // btnclear
             // 
             this.btnclear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnclear.BackColor = System.Drawing.Color.DimGray;
-            this.btnclear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclear.BackColor = System.Drawing.Color.Honeydew;
+            this.btnclear.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclear.ForeColor = System.Drawing.Color.Red;
             this.btnclear.Location = new System.Drawing.Point(199, 149);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(73, 23);
@@ -110,8 +109,9 @@
             // 
             this.btnlogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnlogin.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.BackColor = System.Drawing.Color.Honeydew;
+            this.btnlogin.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnlogin.Location = new System.Drawing.Point(346, 149);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(73, 23);
@@ -163,8 +163,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label4.ForeColor = System.Drawing.Color.Blue;
             this.label4.Location = new System.Drawing.Point(260, 128);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 13);

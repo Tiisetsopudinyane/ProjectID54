@@ -19,11 +19,15 @@ namespace LoginSystem
         {
             InitializeComponent();
             this.list = list;
+            this.BackColor = Color.FromArgb(60, 60, 60);
+            this.ForeColor = Color.FromArgb(128, 128, 128);
         }
         public Lecture()
         {
             InitializeComponent();
             stu = new StudentWindow();
+            this.BackColor = Color.FromArgb(60, 60, 60);
+            this.ForeColor = Color.FromArgb(128, 128, 128);
         }
         StudentWindow stu;
         private void Button7_Click(object sender, EventArgs e)
@@ -137,6 +141,9 @@ namespace LoginSystem
                 sw.Close();
             }
         }
+
+       
+
     }
 }
 

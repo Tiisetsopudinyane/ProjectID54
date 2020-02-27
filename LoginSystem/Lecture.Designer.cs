@@ -187,6 +187,7 @@
             this.columnHeader8});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(6, 17);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(867, 129);
@@ -425,6 +426,7 @@
             // 
             // txtQuiz1
             // 
+            this.txtQuiz1.BackColor = System.Drawing.Color.White;
             this.txtQuiz1.Location = new System.Drawing.Point(140, 121);
             this.txtQuiz1.Name = "txtQuiz1";
             this.txtQuiz1.Size = new System.Drawing.Size(146, 20);
@@ -502,6 +504,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.groupBox5.Controls.Add(this.pictureBox1);
             this.groupBox5.Controls.Add(this.pictureBoxminimize);
             this.groupBox5.Controls.Add(this.pictureBoxExit);

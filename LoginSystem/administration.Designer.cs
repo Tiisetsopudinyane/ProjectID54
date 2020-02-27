@@ -247,30 +247,30 @@
             this.sAVEToolStripMenuItem,
             this.cHANGEBACKGROUNDPICTUREToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(253, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(252, 92);
             // 
             // dELETEToolStripMenuItem
             // 
             this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
-            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
+            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
             this.dELETEToolStripMenuItem.Text = "DELETE";
             // 
             // uPDATEToolStripMenuItem
             // 
             this.uPDATEToolStripMenuItem.Name = "uPDATEToolStripMenuItem";
-            this.uPDATEToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
+            this.uPDATEToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
             this.uPDATEToolStripMenuItem.Text = "UPDATE";
             // 
             // sAVEToolStripMenuItem
             // 
             this.sAVEToolStripMenuItem.Name = "sAVEToolStripMenuItem";
-            this.sAVEToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
+            this.sAVEToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
             this.sAVEToolStripMenuItem.Text = "SAVE";
             // 
             // cHANGEBACKGROUNDPICTUREToolStripMenuItem
             // 
             this.cHANGEBACKGROUNDPICTUREToolStripMenuItem.Name = "cHANGEBACKGROUNDPICTUREToolStripMenuItem";
-            this.cHANGEBACKGROUNDPICTUREToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
+            this.cHANGEBACKGROUNDPICTUREToolStripMenuItem.Size = new System.Drawing.Size(251, 22);
             this.cHANGEBACKGROUNDPICTUREToolStripMenuItem.Text = "CHANGE BACKGROUND PICTURE";
             // 
             // groupBox2
@@ -676,39 +676,39 @@
             this.mEMBERINFORMATIONToolStripMenuItem,
             this.vIEWPROOFOFREGISTRATIONToolStripMenuItem});
             this.contextMenuForSearch.Name = "contextMenuForSearch";
-            this.contextMenuForSearch.Size = new System.Drawing.Size(206, 114);
+            this.contextMenuForSearch.Size = new System.Drawing.Size(205, 114);
             // 
             // dELETEToolStripMenuItem1
             // 
             this.dELETEToolStripMenuItem1.Name = "dELETEToolStripMenuItem1";
-            this.dELETEToolStripMenuItem1.Size = new System.Drawing.Size(205, 22);
+            this.dELETEToolStripMenuItem1.Size = new System.Drawing.Size(204, 22);
             this.dELETEToolStripMenuItem1.Text = "DELETE ";
             this.dELETEToolStripMenuItem1.Click += new System.EventHandler(this.btnclearStu_Click);
             // 
             // uPDATEToolStripMenuItem1
             // 
             this.uPDATEToolStripMenuItem1.Name = "uPDATEToolStripMenuItem1";
-            this.uPDATEToolStripMenuItem1.Size = new System.Drawing.Size(205, 22);
+            this.uPDATEToolStripMenuItem1.Size = new System.Drawing.Size(204, 22);
             this.uPDATEToolStripMenuItem1.Text = "UPDATE";
             // 
             // vIEWTRANSCRIPTToolStripMenuItem
             // 
             this.vIEWTRANSCRIPTToolStripMenuItem.Name = "vIEWTRANSCRIPTToolStripMenuItem";
-            this.vIEWTRANSCRIPTToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.vIEWTRANSCRIPTToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.vIEWTRANSCRIPTToolStripMenuItem.Text = "VIEW TRANSCRIPT";
             this.vIEWTRANSCRIPTToolStripMenuItem.Click += new System.EventHandler(this.VIEWTRANSCRIPTToolStripMenuItem_Click);
             // 
             // mEMBERINFORMATIONToolStripMenuItem
             // 
             this.mEMBERINFORMATIONToolStripMenuItem.Name = "mEMBERINFORMATIONToolStripMenuItem";
-            this.mEMBERINFORMATIONToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.mEMBERINFORMATIONToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.mEMBERINFORMATIONToolStripMenuItem.Text = "MEMBER INFORMATION";
             this.mEMBERINFORMATIONToolStripMenuItem.Click += new System.EventHandler(this.MEMBERINFORMATIONToolStripMenuItem_Click);
             // 
             // vIEWPROOFOFREGISTRATIONToolStripMenuItem
             // 
             this.vIEWPROOFOFREGISTRATIONToolStripMenuItem.Name = "vIEWPROOFOFREGISTRATIONToolStripMenuItem";
-            this.vIEWPROOFOFREGISTRATIONToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.vIEWPROOFOFREGISTRATIONToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             // 
             // btnsearchStu
             // 
@@ -738,7 +738,7 @@
             this.txtsearchStu.Name = "txtsearchStu";
             this.txtsearchStu.Size = new System.Drawing.Size(144, 20);
             this.txtsearchStu.TabIndex = 17;
-            this.txtsearchStu.Click += new System.EventHandler(this.txtsearchStu_Click);
+            this.txtsearchStu.Enter += new System.EventHandler(this.txtsearchStu_Enter);
             // 
             // administration
             // 

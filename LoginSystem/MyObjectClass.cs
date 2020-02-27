@@ -42,6 +42,7 @@ namespace LoginSystem
             this.email = null;
             this.universityname = "UNISA";
             myusername();
+            this.studentEmployeenumber=null;
             myStudentEmployerNumber();
             date();
             

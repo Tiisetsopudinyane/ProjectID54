@@ -19,7 +19,10 @@ namespace LoginSystem
             ad = new administration();
             lec = new Lecture();
             myobject = new MyObjectClass();
-          //  MessageBox.Show("first login as ADMIN username(newuser), password(0000) then register yourself as lecture or student \n,please check your username and password to login", "FOR TESTING ONLY", MessageBoxButtons.OK);
+            this.BackColor = Color.FromArgb(60, 60, 60);
+            this.ForeColor = Color.FromArgb(128, 128,128);
+
+            //  MessageBox.Show("first login as ADMIN username(newuser), password(0000) then register yourself as lecture or student \n,please check your username and password to login", "FOR TESTING ONLY", MessageBoxButtons.OK);
         }
 
         administration ad;
