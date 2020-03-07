@@ -47,7 +47,7 @@ namespace LoginSystem
 
         private void PictureBox2_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            this.Refresh();
 
         }
 
@@ -58,7 +58,6 @@ namespace LoginSystem
             {
                 this.Close();
                 Application.Exit();
-                this.Hide();
             }
         }
 
