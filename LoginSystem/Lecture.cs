@@ -77,7 +77,7 @@ namespace LoginSystem
         {
             richTxtAnoucements.Clear();
         }
-
+        
         private void BtnBrowse_Click(object sender, EventArgs e)
         {
             ofd = new OpenFileDialog();
@@ -117,7 +117,6 @@ namespace LoginSystem
                 txtCourseN.Text = "Physics";
             }
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             ListViewItem lvi = new ListViewItem(txtCourseN.Text);
@@ -127,23 +126,40 @@ namespace LoginSystem
             lvi.SubItems.Add(txtMidterm.Text);
             lvi.SubItems.Add(txtExam.Text);
             lvi.SubItems.Add(txtFgrade.Text);
-            lvi.SubItems.Add(cmbSymbol.SelectedItem.ToString());
 
-            listView1.Items.Add(lvi);
-
-            if (cmbCourseCode.SelectedIndex == -1) return;
-            else
+            bool status =true;
+            while (status)
             {
+                status = false;
+                if (cmbSymbol.SelectedIndex == -1)
+                    MessageBox.Show("please choose grade symbol");
+                else if (cmbCourseCode.SelectedIndex == -1)
+                    MessageBox.Show("choose course");
+                else if(String.IsNullOrEmpty(txtQuiz1.Text) || txtQuiz1.Text.Any(c => !char.IsNumber(c))
+                    || String.IsNullOrEmpty(txtQuiz2.Text) || txtQuiz2.Text.Any(c => !char.IsNumber(c))
+                    || String.IsNullOrEmpty(txtMidterm.Text) || txtMidterm.Text.Any(c => !char.IsNumber(c))
+                    || String.IsNullOrEmpty(txtExam.Text) || txtExam.Text.Any(c => !char.IsNumber(c))
+                    || String.IsNullOrEmpty(txtFgrade.Text) || txtFgrade.Text.Any(c => !char.IsNumber(c))
+                    || String.IsNullOrEmpty(txtID.Text) || txtID.Text.Any(c => !char.IsNumber(c)))
+                {
+                    return;
+                }
+               
+            }status = false;
+            if (cmbSymbol.SelectedIndex != -1 && cmbCourseCode.SelectedIndex !=-1)
+            { 
+                lvi.SubItems.Add(cmbSymbol.SelectedItem.ToString());
+                listView1.Items.Add(lvi);
                 StreamWriter sw = new StreamWriter(cmbCourseCode.SelectedItem.ToString() + ".txt", true);
                 String line = txtID.Text + "-" + txtCourseN.Text + "-" + txtQuiz1.Text + "-" + txtQuiz2.Text + "-" +
                                txtMidterm.Text + "-" + txtExam.Text + "-" + txtFgrade.Text + "-" + cmbSymbol.SelectedItem.ToString();
                 sw.WriteLine(line);
                 sw.Close();
             }
+            
         }
 
-       
-
+        
     }
 }
 

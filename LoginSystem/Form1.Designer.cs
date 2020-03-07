@@ -77,6 +77,7 @@
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(251, 20);
             this.txtusername.TabIndex = 1;
+            this.txtusername.Text = "Andreas.Motsie";
             this.txtusername.Click += new System.EventHandler(this.txtusername_Click);
             // 
             // txtpassword
@@ -88,6 +89,7 @@
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(251, 20);
             this.txtpassword.TabIndex = 2;
+            this.txtpassword.Text = "46664";
             this.txtpassword.Click += new System.EventHandler(this.txtpassword_Click);
             // 
             // btnclear
